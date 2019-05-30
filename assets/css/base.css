@@ -1,9 +1,355 @@
+/* Colors #code:
+Kleur 1 (aangegeven): #9866D1
+Kleur 2 (zelf gekozen): #E87566
+*/ 
+
+/*Global*/
 html {
   height: 100%;
+  background-color: #222;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--t-body);
   height: inherit;
   margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: none;
+}
+
+.button_1{
+  height: 38px;
+  background: #E87566;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button_2{
+  --padding-x: 20px;
+  --padding-y: 15px;
+  background: #E87566;
+  border: 0;
+  padding: var(--padding-y) var(--padding-x);
+  border-bottom: 1px solid #E87566;
+}
+
+/*Header*/
+
+header {
+  background-color: #222;
+  padding-top: 0px;
+  min-height: 60px;
+  border-bottom: #9866D1 2px solid;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+header nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+header #branding {
+  float: left;
+} 
+
+header nav a:hover {
+  color: #9866D1;
+}
+
+header nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color:#9866D1;
+
+  position: absolute;
+  top: 0px;
+  width: 0%;
+  
+  transition: all ease-in-out 250ms;
+}
+
+header nav a:hover::before {
+  width: 100%;
+}
+
+/*Main page*/
+
+#homepage {
+  margin: auto;
+  overflow: none;
+  min-height: 700px;
+  background: url(../pictures/Field.JPG) no-repeat 0 -260px;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+#homepage h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+#homepage h1 a {
+  color: #E87566;
+}
+
+#homepage p {
+  font-size: 35px;
+}
+
+.arrow {
+  font-size: 150%;
+  margin-top: 375px;
+  color: white;
+}
+
+#info{
+  float: center;
+  background: #9866D1;
+}
+
+#info h1{
+  color: #ffffff;
+  text-align: center;
+
+}
+
+#info p{
+  font-size: 19px;
+}
+
+#info p a {
+  color: #ffffff;
+}
+
+/*contact*/
+
+#contact{
+  float: center;
+}
+
+#contact h1 {
+  color: #ffffff;
+  text-align: center;
+
+}
+
+#contact h2{
+  color: #E87566;
+  font-size: 25px;
+}
+
+#contact p {
+  color: #9866D1;
+  font-size: 18px;
+}
+
+/*Extra vragen*/
+#information {
+  padding: 55px;
+  color: #ffffff;
+  background: #9866D1; 
+}
+
+#information h1{
+  text-align: center;
+}
+
+#information form{
+  margin-left: 275px;
+}
+
+#information input[type="email"]{
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+#information input[type="text"]{
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+/*reserveren*/
+#reserveren {
+  padding: 55px;
+  color: #ffffff; 
+}
+
+#reserveren h1{
+  text-align: center;
+}
+
+#reserveren form{
+  display: inline-block;
+  margin: 0px 450px 0px 450px;
+
+}
+
+#reserveren input[type="email"]{
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+  margin-top: 4px;
+}
+
+#reserveren input[type="text"]{
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+  margin-top: 4px;
+}
+
+#reserveren button{
+  margin  : 10px auto;
+  text-align: center;
+  padding-left: 90px;
+  padding-right: 90px;
+  align-self: auto;
+}
+
+/*boxes*/
+#boxes{
+  margin-top: 20px;
+  background-color: #9866D1;
+}
+
+#boxes h1{
+  text-align: center;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+#boxes .box{
+  margin: auto;
+  text-align: center;
+  width: 30%;
+  height: 30%;
+  padding: 19px;
+  overflow: hidden;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #9866D1;
+}
+
+#boxes .box img{
+  width: 125%;
+}
+
+footer {
+  min-height: 60px;
+
+  padding: 20px;
+  margin-top: 10px;
+  color: #9866D1;
+  background-color: #222;
+  text-align: center;
+}
+
+footer .back_to_top{
+  
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+footer .back_to_top .button_2{
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+
+/*Media Queries*/
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li{
+    float: none;
+    align-self: auto;
+    text-align: center;
+    width: 82.5%;
+  }
+
+
+  #information form,
+  #information h1,
+  #boxes .box,
+  #reserveren .container{
+    float: none;
+    text-align: center;  
+    width: 90%;
+  }
+
+  #homepage h1{
+    float: none;
+    text-align: center;
+    font-size: 48px;
+  }
+
+  header {
+    padding-bottom: 10px;
+  }
+
+  .logo{
+    float: none;
+  }
+
+  #information button{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #information form, 
+  #reserveren form{
+    display: block;
+    width: 100%;
+    margin: 10px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
